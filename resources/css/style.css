@@ -1,0 +1,353 @@
+/*------------------------------------------------------*/
+/* BASIC SETUP */
+/*------------------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Establishing general page font settings.*/
+html {
+  background-color: #fff;
+  color: rgb(75, 75, 75);
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+}
+
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  content: ".";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+/*------------------------------------------------------*/
+/* REUSABLE COMPONENTS */
+/*------------------------------------------------------*/
+
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 80px 0;
+}
+
+.box {
+  padding: 1%;
+}
+
+/* -------- Headings -------- */
+
+/* This is the hero text itself. Set margin/ font color-size-weight-spacing, etc for the header block.*/
+h1,
+h2,
+h3 {
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 240%;
+  word-spacing: 4px;
+}
+
+h2 {
+  font-size: 180%;
+  word-spacing: 2px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 110%;
+  margin: 15px auto;
+}
+
+/* The "h2:after" is for a space literally below, "after", the item in reference.
+Here, were are just putting a small divider line between the header and the paragraph below.*/
+h2:after {
+  display: block;
+  height: 2px;
+  background-color: #e67e22;
+  content: " ";
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+/*----------------Paragraphs--------------*/
+
+.long-copy {
+  line-height: 145%;
+  width: 70%;
+  margin-left: 15%;
+}
+
+.box p {
+  font-size: 90%;
+  line-height: 145%;
+}
+
+/*----------------Icons--------------*/
+
+.icon-big {
+  font-size: 300%;
+  display: block;
+  color: #e67e22;
+  margin-bottom: 10px;
+}
+
+/* -------- BUTTONS -------- */
+/* Parent "div" class for rest of following button classes.
+Set the size/padding/radius for buttons. Remove default underline
+for btn links by setting text-decoration: none, and start defining
+how button interact when clicked/visited.*/
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 400;
+  text-decoration: none;
+  border-radius: 200px;
+
+  /*Below we set color transtion, so that there is a smoother change in color
+   upon hover over 0.2 seconds, rather than abrupt. make sure to apply to 
+   background of button, borders, and font color changes.*/
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited {
+  background-color: #e67e22;
+  border: 1px solid #e67e22;
+  color: #fff;
+  margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+  border: 1px solid #e67e22;
+  color: #e67e22;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #cf6d17;
+}
+
+/*After setting the general hover color for both .btn-full and .btn-ghost above, 
+now we specify the individual font color reactions for hover & visited below. 
+Make to change border color upon hover as the same as darker hover color, 
+for clean border edgees upon hover.*/
+.btn-full:hover,
+.btn-full:active {
+  border: 1px solid #cf6d17;
+}
+
+.btn-ghost:hover,
+.btn-ghost:visited {
+  border: 1px solid #cf6d17;
+  color: #fff;
+}
+
+/*------------------------------------------------------*/
+/* HEADER*/
+/*------------------------------------------------------*/
+
+/* Settings for the actual header box. The main background image CX sees, 
+making sure the image scales appropriately in the page by using
+ background-size:cover and background-position:center, eliminating the
+ thin margin gap at the top by setting height:100vh, so it is 100% of cx viewport. */
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(img/gym_hero.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  /*As noted by the term 'attachment', this keep the header img in place, 
+  and allows other items  "scroll over" it.*/
+  height: 100vh;
+}
+
+/* This is the "hero" text box, the first non-logo flavor box for the website,
+  and what grabs attention first. Includes hero text, buttons, etc. */
+.hero-text-box {
+  position: absolute;
+  width: 1140px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*Setup up logo height with auto width for scale, and float to the left.*/
+.logo {
+  height: 160px;
+  width: auto;
+  position: absolute;
+  top: 1%;
+  left: 3%;
+}
+
+/*We push the nav links to the right with float, and align them 
+with the logo via margin-top.*/
+.main-nav {
+  float: right;
+  list-style: none;
+  margin-top: 70px;
+}
+
+.main-nav li {
+  display: inline-block;
+  margin-left: 40px;
+}
+
+/*We setup the color, font, remove underline default, and create link hover
+effects. To prevent odd loading, we create a border around the link items, set to 
+transparent, and make a smooth transition to 0.2 like before. */
+.main-nav li a:link,
+.main-nav li a:visited {
+  padding: 6px 0;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 80%;
+  border-bottom: 3px solid transparent;
+  border-bottom-left-radius: 5px;
+  transition: border-bottom 0.2s;
+}
+
+/*Here we put the color detail for the hover and active effect*/
+.main-nav li a:hover,
+.main-nav li a:active {
+  border-bottom: 3px solid #e67e22;
+}
+
+/*------------------------------------------------------*/
+/* Section-steps (How it works)*/
+/*------------------------------------------------------*/
+
+.section-steps {
+  background-color: rgb(241, 240, 240);
+}
+
+/*Will select the first of the steps boxes in cascading order*/
+.steps-box:first-child {
+  text-align: right;
+  padding-right: 3%;
+  margin-top: 30px;
+}
+
+.steps-box:last-child {
+  padding-left: 3%;
+  margin-top: 70px;
+}
+
+.app-screen {
+  width: 40%;
+}
+
+.works-step {
+  margin-bottom: 50px;
+}
+
+/*Affects the last of anything within works-step, which in this case, are the btn types.*/
+.works-step:last-of-type {
+  margin-bottom: 80px;
+}
+
+.works-step div {
+  color: #e67e22;
+  border: 2px solid #e67e22;
+  display: inline-block;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  padding: 5px;
+  float: left;
+  /*^^ Takes everything within the called div's, and set them to float side-by-side left to right.*/
+  font-size: 150%;
+  margin-right: 25px;
+}
+
+.btn-app img {
+  height: 50px;
+  width: auto;
+  margin-right: 10px;
+}
+
+/*------------------------------------------------------*/
+/* Section-features */
+/*------------------------------------------------------*/
+
+.section-features .long-copy {
+  margin-bottom: 30px;
+}
+/*^^ Rather than applying a margin to all long-copy classes, we specify the section 
+along with it.*/
+
+/*------------------------------------------------------*/
+/* Section - Card Showcase*/
+/*------------------------------------------------------*/
+
+.section-cards {
+  padding: 0;
+}
+/*Remember, sections/etc will have default padding. When wanted, we set padding to 0 to clear this.*/
+
+.cards-showcase {
+  list-style: none;
+  width: 100%;
+}
+
+.cards-showcase li {
+  display: block;
+  float: left;
+  width: 25%;
+  /* Display:block is to make sure they are indeed in blocks, and float is to make sure they show side-by-side.
+  Because there are four list -tems (li) in this un-ordered list class at a width of 100%, 
+  we set each list-item to equal 100%, so in this case, 25% per list item.*/
+}
+
+/*This merely formats the "figure" container, and not the photo itself within*/
+.card-photo {
+  width: 100%;
+  overflow: hidden;
+  /*Overflow to lock images into container size no matter the zoom via transform:scale(). We select hidden,
+  as there is no need to scroll within this container.*/
+  background-color: black;
+}
+
+/*This brings the actual photo to the proper ratio and size as the container.*/
+.card-photo img {
+  opacity: 0.7;
+  width: 100%;
+  height: auto;
+  transform: scale(1.15);
+  /*This ^^ will zoom out the photo at 115% size. This will cause the image to 'overflow' theri containers,
+  so we will call an overflow in the actual container.*/
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.card-photo img:hover {
+  opacity: 1;
+  transform: scale(1.03);
+  /* Sets the scale of the image back to normall 100%. */
+}
+
+/*------------------------------------------------------*/
+/* Section - Cities*/
+/*------------------------------------------------------*/

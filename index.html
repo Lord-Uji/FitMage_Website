@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+    <Head>
+        <!-- Links html to css files and Google Font server -->
+        <!--- Download normalize.css, and place in web folder to link here,
+        same with "responsive grid system"-->
+        <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet" type="text/css">
+        <title>FitMage</title>
+    </Head>
+    <body>
+        <header>
+            <!---The first and main section of a website, the fullscreen block the CX sees first before scrolling down-->
+            <nav>
+                <!---Navigation Bar at top of website--->
+                <div class="row">
+                    <!---Inline with logo and navigation buttons--->
+                    <img src="resources/img/fit_logo.png" alt="FitMage Logo" class="logo">
+
+                    <!--- ul means unorderd list --->
+                    <ul class="main-nav">
+                        <!---li means list item-->
+                        <li><a href="#">Packages</a></li>
+                        <li><a href="#">How it works</a></li>
+                        <li><a href="#">Locations</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Sign up</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="hero-text-box">
+                <h1>Goodbye couch elf.<br>hello mythic legend.</h1>
+                <a class="btn btn-full" href="#">I'm ready</a>
+                <a class="btn btn-ghost" href="#">Show me more</a>
+            </div>
+
+        </header>
+        
+        <section class="section-features">
+        <!--This is the second section after scrolling down from the header section-->
+            <div class="row">
+                <h2>Build your deck &mdash; Build your body</h2>
+                <p class="long-copy">
+                    Hello, we’re FitMage, your own hyperbolic time chamber and geek omniverse. We know you’re always busy. No time for a workout. So let us take care of all that, we’re good at it, we promise!
+                </p>
+            
+                <div class="col span-1-of-4 box">
+                    <i class="ion-ios-infinite icon-big"></i>
+                    <h3>Up to 365 days/year</h3>
+                    <p>
+                        Ever find yourself winded half-way through an epic larp battle? Never again! Our subscription plans include up to 365 days/year coverage. You can choose whichever class package with full flexibility. Foes will cower at your relentless endurance!
+                    </p>
+                </div>
+
+                <div class="col span-1-of-4 box">
+                    <i class="ion-android-stopwatch icon-big"></i>
+                    <h3>Stronger in just<br>30 minutes</h3>
+                    <p>
+                        Never spend an hour slogging through a workout. Get in, get out, and gain that sweet XP! We offer high-end shower facilities for you to freshen up, bask in relaxing glory, and get back to those duels.
+                    </p>
+                </div>
+
+                <div class="col span-1-of-4 box">
+                    <i class="ion-happy-outline icon-big"></i>
+                    <h3>Epic treasure</h3>
+                    <p>
+                        Every class ends with sweet loot &mdash; your choice of 3 boosters from a massive range of TCGs, and a chance at the bonus prize of the day! Even further, if enrolled in any package, you can enter any event at the monthly Clash of Cards, free of charge.
+                    </p>
+                </div>
+            
+                <div class="col span-1-of-4 box">
+                    <i class="ion-arrow-graph-up-right icon-big"></i>
+                    <h3>Extensive level system</h3>
+                    <p>
+                        We host a digital XP system where you can level up, min-max your store trait bonuses, and earn special rewards at personal milestones. These rewards can be wild, rare and especially magestic!
+                    </p>
+                </div>
+            </div>
+
+        </section>
+        
+        <section class="section-cards">
+            <ul class="cards-showcase clearfix">
+                <li>
+                    <!--"figure" is a form of container. Since we are making a row of 
+                    4 block images, twice, only 4 will go here.-->
+                    <figure class="card-photo">
+                        <img src="resources/img/mtgcards.jpg" alt="Magic the Gathering">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="card-photo">
+                        <img src="resources/img/catan.jpg" alt="Catan">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="card-photo">
+                        <img src="resources/img/comics.jpg" alt="Comics">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="card-photo">
+                        <img src="resources/img/dbzcards.jpg" alt="Dragon Ball TCG's">
+                    </figure>
+                </li>
+            </ul>
+            <ul class="cards-showcase clearfix">
+                <li>
+                    <figure class="card-photo">
+                        <img src="resources/img/dnd.jpg" alt="Dungeons & Dragons">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="card-photo">
+                        <img src="resources/img/pokemonpacks.jpg" alt="Pokémon Trading Card Game">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="card-photo">
+                        <img src="resources/img/lotr.jpg" alt="Novelty Board Games">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="card-photo">
+                        <img src="resources/img/yugioh1.jpg" alt="Yu-Gi-Oh! Trading Card Game">
+                    </figure>
+                </li>
+            </ul>
+        </section>
+
+        <section class="section-steps">
+            <div class="row">
+                <h2>How it works &mdash; Simple as 1, 2, 3</h2>
+            </div>
+            <div class="row">
+                <div class="col span-1-of-2 steps-box">
+                    <img src="resources/img/app-iPhone-FitMage.png" alt="FitMage app on iPhone" class="app-screen">
+                </div>
+                <div class="col span-1-of-2 steps-box">
+                    <div class="works-step">
+                        <div>1</div>
+                        <p>Choose the subscription plan that best fits your needs and sign up today.</p>
+                    </div>
+                    <div class="works-step">
+                        <div>2</div>
+                        <p>Show up to any class, input the session code from your instructor, and get to work.</p>
+                    </div>
+                    <div class="works-step">
+                        <div>3</div>
+                        <p>Gain account XP and receive instantly redeemable vouchers for loot!</p>
+                    </div>
+
+                    <a href="#" class="btn-app">
+                        <img src="resources/img/download-app.svg" alt="App Store Button">
+                    </a>
+                    <a href="#" class="btn-app">
+                        <img src="resources/img/download-app-android.png" alt="Play Store Button">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-cities">
+            <div class="row">
+                <h2>Our current locations</h2>
+            </div>
+            <div class="row">
+                <div class="col span-1-of-4 box">
+                    <img src="resources/img/austin.jpg" alt="Austin">
+                    <h3>Austin</h3>
+                    <div class="city-feature">
+                        <i class="ion-ios-person"></i>
+                        120+ relentles warriors
+                    </div>
+                    <div class="city-feature">
+                        <i class="ion-ios-star"></i>
+                        7 epic trainers
+                    </div>
+                    <div class="city-feature">
+                        <i class="ion-social-twitter"></i>
+                        @fitmage_austin
+                    </div>
+                </div>
+
+                <div class="col span-1-of-4 box">
+                    <img src="resources/img/dallas.jpg" alt="Dallas">
+                    <h3>Dallas</h3>
+                    <div class="city-feature">
+                        <i class="ion-ios-person"></i>
+                        100+ cunning rogues
+                    </div>
+                    <div class="city-feature">
+                        <i class="ion-ios-star"></i>
+                        6 epic trainers
+                    </div>
+                    <div class="city-feature">
+                        <i class="ion-social-twitter"></i>
+                        @fitmage_dallas
+                    </div>
+                </div>
+
+                <div class="col span-1-of-4 box">
+                    <img src="resources/img/san-antonio.jpg" alt="San Antonio">
+                    <h3>San Antonio</h3>
+                    <div class="city-feature">
+                        <i class="ion-ios-person"></i>
+                        130+ radiant clerics
+                    </div>
+                    <div class="city-feature">
+                        <i class="ion-ios-star"></i>
+                        5 epic trainers
+                    </div>
+                    <div class="city-feature">
+                        <i class="ion-social-twitter"></i>
+                        @fitmage_sanantonio
+                    </div>
+                </div>
+
+                <div class="col span-1-of-4 box">
+                    <img src="resources/img/houston.jpg" alt="Houston">
+                    <h3>Houston</h3>
+                    <div class="city-feature">
+                        <i class="ion-ios-person"></i>
+                        150+ brilliant wizards
+                    </div>
+                    <div class="city-feature">
+                        <i class="ion-ios-star"></i>
+                        11 epic trainers
+                    </div>
+                    <div class="city-feature">
+                        <i class="ion-social-twitter"></i>
+                        @fitmage_housto
+                    </div>
+                </div>
+            </div>
+            
+                   
+
+  
+
+        </section>
+     
+    </body>
+
+
+</html>
