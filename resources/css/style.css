@@ -109,7 +109,47 @@ h2:after {
   margin-bottom: 10px;
 }
 
-/* -------- BUTTONS -------- */
+.icon-small {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  color: #e67e22;
+  font-size: 120%;
+  margin-right: 10px;
+
+  line-height: 120%;
+  vertical-align: middle;
+  margin-top: -2.5px;
+  /*Aligns the icons with the text, side-by-side. negative margin "takes space away". */
+}
+
+/* -------- Links -------- */
+
+.city-feature a:link,
+.city-feature a:visited {
+  color: #e67e22;
+  text-decoration: none;
+  padding-bottom: 1px;
+  border-bottom: 1px solid #e67e22;
+  transition: border-bottom 0.2, color 0.2;
+  /*We use the div class, then a:link, to specify a group of links, 
+    such as the links in our city features section*/
+}
+
+a:hover,
+a:active {
+  color: #555;
+  border-bottom: 1px solid transparent;
+}
+
+.btn-app:link,
+.btn-app:visited {
+  text-decoration: none;
+
+  /*Here, we have formatted Play Store and App Store img links with text-decoration: none, removing odd text glitches near it.*/
+}
+
+/* ------------------------ BUTTONS ----------------------- */
 /* Parent "div" class for rest of following button classes.
 Set the size/padding/radius for buttons. Remove default underline
 for btn links by setting text-decoration: none, and start defining
@@ -351,3 +391,13 @@ along with it.*/
 /*------------------------------------------------------*/
 /* Section - Cities*/
 /*------------------------------------------------------*/
+
+.box img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.city-feature {
+  margin-bottom: 5px;
+}
