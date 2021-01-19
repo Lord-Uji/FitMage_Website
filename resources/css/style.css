@@ -7,7 +7,7 @@
   box-sizing: border-box;
 }
 
-/*Establishing general page font settings.*/
+/* Establishing general page font settings.*/
 html {
   background-color: #fff;
   color: rgb(75, 75, 75);
@@ -70,6 +70,10 @@ h2 {
   margin-bottom: 30px;
 }
 
+.omnath {
+  color: rgb(223, 223, 223);
+}
+
 h3 {
   font-size: 110%;
   margin: 15px auto;
@@ -120,7 +124,7 @@ h2:after {
   line-height: 120%;
   vertical-align: middle;
   margin-top: -2.5px;
-  /*Aligns the icons with the text, side-by-side. negative margin "takes space away". */
+  /* Aligns the icons with the text, side-by-side. negative margin "takes space away". */
 }
 
 /* -------- Links -------- */
@@ -132,7 +136,7 @@ h2:after {
   padding-bottom: 1px;
   border-bottom: 1px solid #e67e22;
   transition: border-bottom 0.2, color 0.2;
-  /*We use the div class, then a:link, to specify a group of links, 
+  /* We use the div class, then a:link, to specify a group of links, 
     such as the links in our city features section*/
 }
 
@@ -146,7 +150,7 @@ a:active {
 .btn-app:visited {
   text-decoration: none;
 
-  /*Here, we have formatted Play Store and App Store img links with text-decoration: none, removing odd text glitches near it.*/
+  /* Here, we have formatted Play Store and App Store img links with text-decoration: none, removing odd text glitches near it.*/
 }
 
 /* ------------------------ BUTTONS ----------------------- */
@@ -155,21 +159,23 @@ Set the size/padding/radius for buttons. Remove default underline
 for btn links by setting text-decoration: none, and start defining
 how button interact when clicked/visited.*/
 .btn:link,
-.btn:visited {
+.btn:visited,
+input[type="submit"] {
   display: inline-block;
   padding: 10px 30px;
   font-weight: 400;
   text-decoration: none;
   border-radius: 200px;
 
-  /*Below we set color transtion, so that there is a smoother change in color
+  /* Below we set color transtion, so that there is a smoother change in color
    upon hover over 0.2 seconds, rather than abrupt. make sure to apply to 
    background of button, borders, and font color changes.*/
   transition: background-color 0.2s, border 0.2s, color 0.2s;
 }
 
 .btn-full:link,
-.btn-full:visited {
+.btn-full:visited,
+input[type="submit"] {
   background-color: #e67e22;
   border: 1px solid #e67e22;
   color: #fff;
@@ -178,26 +184,29 @@ how button interact when clicked/visited.*/
 
 .btn-ghost:link,
 .btn-ghost:visited {
-  border: 1px solid #e67e22;
   color: #e67e22;
+  border: 1px solid #e67e22;
 }
 
 .btn:hover,
-.btn:active {
+.btn:active,
+input[type="submit"]:hover,
+input[type="submit"]:active {
   background-color: #cf6d17;
 }
 
-/*After setting the general hover color for both .btn-full and .btn-ghost above, 
+/* After setting the general hover color for both .btn-full and .btn-ghost above, 
 now we specify the individual font color reactions for hover & visited below. 
 Make to change border color upon hover as the same as darker hover color, 
 for clean border edgees upon hover.*/
 .btn-full:hover,
-.btn-full:active {
+.btn-full:active,
+input[type="submit"] {
   border: 1px solid #cf6d17;
 }
 
 .btn-ghost:hover,
-.btn-ghost:visited {
+.btn-ghost:active {
   border: 1px solid #cf6d17;
   color: #fff;
 }
@@ -216,7 +225,7 @@ header {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  /*As noted by the term 'attachment', this keep the header img in place, 
+  /* As noted by the term 'attachment', this keep the header img in place, 
   and allows other items  "scroll over" it.*/
   height: 100vh;
 }
@@ -231,7 +240,7 @@ header {
   transform: translate(-50%, -50%);
 }
 
-/*Setup up logo height with auto width for scale, and float to the left.*/
+/* Setup up logo height with auto width for scale, and float to the left.*/
 .logo {
   height: 160px;
   width: auto;
@@ -240,7 +249,7 @@ header {
   left: 3%;
 }
 
-/*We push the nav links to the right with float, and align them 
+/* We push the nav links to the right with float, and align them 
 with the logo via margin-top.*/
 .main-nav {
   float: right;
@@ -253,7 +262,7 @@ with the logo via margin-top.*/
   margin-left: 40px;
 }
 
-/*We setup the color, font, remove underline default, and create link hover
+/* We setup the color, font, remove underline default, and create link hover
 effects. To prevent odd loading, we create a border around the link items, set to 
 transparent, and make a smooth transition to 0.2 like before. */
 .main-nav li a:link,
@@ -269,7 +278,7 @@ transparent, and make a smooth transition to 0.2 like before. */
   transition: border-bottom 0.2s;
 }
 
-/*Here we put the color detail for the hover and active effect*/
+/* Here we put the color detail for the hover and active effect*/
 .main-nav li a:hover,
 .main-nav li a:active {
   border-bottom: 3px solid #e67e22;
@@ -283,7 +292,7 @@ transparent, and make a smooth transition to 0.2 like before. */
   background-color: rgb(241, 240, 240);
 }
 
-/*Will select the first of the steps boxes in cascading order*/
+/* Will select the first of the steps boxes in cascading order*/
 .steps-box:first-child {
   text-align: right;
   padding-right: 3%;
@@ -303,7 +312,7 @@ transparent, and make a smooth transition to 0.2 like before. */
   margin-bottom: 50px;
 }
 
-/*Affects the last of anything within works-step, which in this case, are the btn types.*/
+/* Affects the last of anything within works-step, which in this case, are the btn types.*/
 .works-step:last-of-type {
   margin-bottom: 80px;
 }
@@ -346,7 +355,7 @@ along with it.*/
 .section-cards {
   padding: 0;
 }
-/*Remember, sections/etc will have default padding. When wanted, we set padding to 0 to clear this.*/
+/* Remember, sections/etc will have default padding. When wanted, we set padding to 0 to clear this.*/
 
 .cards-showcase {
   list-style: none;
@@ -362,22 +371,22 @@ along with it.*/
   we set each list-item to equal 100%, so in this case, 25% per list item.*/
 }
 
-/*This merely formats the "figure" container, and not the photo itself within*/
+/* This merely formats the "figure" container, and not the photo itself within*/
 .card-photo {
   width: 100%;
   overflow: hidden;
-  /*Overflow to lock images into container size no matter the zoom via transform:scale(). We select hidden,
+  /* Overflow to lock images into container size no matter the zoom via transform:scale(). We select hidden,
   as there is no need to scroll within this container.*/
   background-color: black;
 }
 
-/*This brings the actual photo to the proper ratio and size as the container.*/
+/* This brings the actual photo to the proper ratio and size as the container.*/
 .card-photo img {
   opacity: 0.7;
   width: 100%;
   height: auto;
   transform: scale(1.15);
-  /*This ^^ will zoom out the photo at 115% size. This will cause the image to 'overflow' theri containers,
+  /* This ^^ will zoom out the photo at 115% size. This will cause the image to 'overflow' theri containers,
   so we will call an overflow in the actual container.*/
   transition: transform 0.5s, opacity 0.5s;
 }
@@ -400,4 +409,186 @@ along with it.*/
 
 .city-feature {
   margin-bottom: 5px;
+}
+
+/*------------------------------------------------------*/
+/* Section-Signup */
+/*------------------------------------------------------*/
+
+.section-signup {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(img/omnath1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.plan-box {
+  background-color: white;
+  border-radius: 5px;
+  width: 90%;
+  margin-left: 5%;
+  box-shadow: 0 2px 2px rgb(194, 194, 194);
+  /* First value is for x-axis, second is for y-axis, third is blur, last is the color*/
+}
+/* General values for all the boxes in this row*/
+
+.plan-box div {
+  padding: 15px;
+  border-bottom: 1px solid rgb(230, 230, 230);
+}
+/* Formatting all the individual divs within each box. For example, we have price, plan features,
+and the sign-up up, as individual divs sections within our "plan boxes". By implementing padding
+and a 1px solid border, we properly seperate all these div's within the box cleanly.*/
+
+.plan-box div:first-child {
+  background-color: rgb(249, 249, 249);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.plan-box div:last-child {
+  text-align: center;
+  border: 0;
+}
+/* As stated in the call "last-child", this affects only the last child in the div, which 
+in this case is the div for the sign-up buttons.*/
+
+.plan-price {
+  font-size: 300%;
+  margin-bottom: 10px;
+  font-weight: 300;
+  color: #e67e22;
+}
+
+.plan-price span {
+  font-size: 40%;
+  font-weight: 400;
+}
+/* Since this "span" call is the child of the .plan-price parent, the fontsize is relative to
+the font size set in the parent. In this instance, setting font-size to 50% in the child, will equate
+to a relative font-size of 150%, since font-size is set to 300% in the parent*/
+
+.plan-price-month {
+  font-size: 80%;
+}
+
+.plan-box ul {
+  list-style: none;
+  /* Another reminder, to remove default underlines on links, we use text-decoration-style: none;
+  To remove default bullets on unordered lists, we use list-style: none;*/
+}
+
+.plan-box ul li {
+  padding: 5px 0;
+}
+
+/*------------------------------------------------------*/
+/* Section-Form */
+/*------------------------------------------------------*/
+
+.contact-form {
+  width: 60%;
+  margin: 0 auto;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 7px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+/* Using [] means for "all" of that type, which allows us to specify */
+
+input[type="checkbox"] {
+  margin: 10px 5px 10px 0;
+}
+
+*:focus {
+  outline: none;
+}
+/* ^^ This is to remove default border around inputs when selected */
+
+/*------------------------------------------------------*/
+/* Footer */
+/*------------------------------------------------------*/
+
+footer {
+  background-color: #333;
+  padding: 30px;
+  font-size: 90%;
+}
+
+footer p {
+  color: #888;
+  text-align: center;
+  font-size: 100%;
+  margin-top: 20px;
+}
+
+.footer-nav {
+  list-style: none;
+  float: left;
+}
+
+.social-links {
+  list-style: none;
+  float: right;
+}
+
+.footer-nav li,
+.social-links li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+  margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+  border: 0;
+  text-decoration: none;
+  color: rgb(173, 173, 173);
+  transition: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+  color: rgb(255, 255, 255);
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+  font-size: 150%;
+}
+
+.ion-social-facebook,
+.ion-social-twitter,
+.ion-social-googleplus,
+.ion-social-instagram-outline {
+  transition: color 0.3s;
+}
+
+.ion-social-facebook:hover {
+  color: #3b5998;
+}
+
+.ion-social-twitter:hover {
+  color: #00aced;
+}
+
+.ion-social-googleplus:hover {
+  color: #bb0000;
+}
+
+.ion-social-instagram-outline:hover {
+  color: #517fa4;
 }

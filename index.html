@@ -14,7 +14,8 @@
     </Head>
     <body>
         <header>
-            <!---The first and main section of a website, the fullscreen block the CX sees first before scrolling down-->
+<!---------- HERO-HEADER SECTION ----------->
+            <!---The first and main section of a website, the full block the CX sees first-->
             <nav>
                 <!---Navigation Bar at top of website--->
                 <div class="row">
@@ -40,7 +41,7 @@
             </div>
 
         </header>
-        
+<!----------------------FEATURES SECTION ---------------->
         <section class="section-features">
         <!--This is the second section after scrolling down from the header section-->
             <div class="row">
@@ -84,6 +85,7 @@
 
         </section>
         
+<!------------------------- CARDS (Images) SECTION --------------------------->     
         <section class="section-cards">
             <ul class="cards-showcase clearfix">
                 <li>
@@ -133,6 +135,7 @@
             </ul>
         </section>
 
+<!--------------------------- STEPS SECTION -------------------------->
         <section class="section-steps">
             <div class="row">
                 <h2>How it works &mdash; Simple as 1, 2, 3</h2>
@@ -165,6 +168,7 @@
             </div>
         </section>
 
+<!--------------------------- CITIES SECTION --------------------------------->
         <section class="section-cities">
             <div class="row">
                 <h2>Our current locations</h2>
@@ -238,14 +242,188 @@
                     </div>
                 </div>
             </div>
-            
-                   
-
-  
-
         </section>
-     
+
+<!------------------- SIGNUP SECTION -------------------->
+        <section class="section-signup">
+            <div class="row">
+                <h2 class="omnath">Sign Up and Pricing</h2>
+            </div>
+
+            <div class="row">
+
+                <div class="col span-1-of-3">
+                    <div class="plan-box">
+                        <div>
+                            <h3>Mythic</h3>
+                            <p class="plan-price">$160 <span>/ month</span></p>
+                            <!---"span" functions allow us to change the font styling of specific characters-->
+                            <p class="plan-price-month">Unlimited classes</p>
+                        </div>
+                        <div>
+                            <ul>
+                                <li><i class="ion-checkmark icon-small"></i>Any two boosters per class</li>
+                                <li><i class="ion-checkmark icon-small"></i>24/7 access</li>
+                                <li><i class="ion-checkmark icon-small"></i>20% XP boost</li>
+                                <li><i class="ion-checkmark icon-small"></i>Free entry to Clash of Cards </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <a href="#" class="btn btn-full">Sign up now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col span-1-of-3">
+                    <div class="plan-box">
+                        <div>
+                            <h3>Rare</h3>
+                            <p class="plan-price">$70 <span>/ month</span></p>
+                            <p class="plan-price-month">8 classes per month</p>
+                        </div>
+                        <div>
+                            <ul>
+                                <li><i class="ion-checkmark icon-small"></i>One new booster per class </li>
+                                <li><i class="ion-checkmark icon-small"></i>One random booster per class </li>
+                                <li><i class="ion-checkmark icon-small"></i>10% XP boost</li>
+                                <li><i class="ion-checkmark icon-small"></i>Free entry to Clash of Cards</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <a href="#" class="btn btn-ghost">Sign up now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col span-1-of-3">
+                    <div class="plan-box">
+                        <div>
+                            <h3>Uncommon</h3>
+                            <p class="plan-price">$40 <span>/ month</span></p>
+                            <p class="plan-price-month">4 classes per month</p>
+                        </div>
+                        <div>
+                            <ul>
+                                <li><i class="ion-checkmark icon-small"></i>One new booster per class</li>
+                                <li> <i class="ion-checkmark icon-small"></i>One random booster per class</li>
+                                <li><i class="ion-checkmark icon-small"></i>5% XP boost</li>
+                                <li><i class="ion-checkmark icon-small"></i>Free entry to Clash of Cards</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <a href="#" class="btn btn-ghost">Sign up now</a>
+                        </div>
+                    </div>
+                </div>
+           </div>
+        </section>
+
+<!------------------- CONTACT FORM SECTION -------------------->
+        <section class="section-form">
+            <div class="row">
+                <h2>We're happy to hear from you</h2>
+            </div>
+            <div class="row">
+                <form method="post" action="#" class="contact-form">
+                    <div class="row">
+
+                        <div class="col span-1-of-3">
+                            <label for="name">Name</label>
+                            <!---adding for=" " allows for the label to be clicked, and prime the input for characters-->
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="text" name="name" id="name" placeholder="Your Name" required>
+                            <!--"required means there must be a character value here before sending a form"-->
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="email" name="email" id="email" placeholder="Your Email" required>
+                            <!-- "required means there must be a character value here before sending a form"-->
+                            <!--- A placholder is the default text in the box before input-->
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="find-us">How did you find us?</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                           <select name="find-us" id="find-us">
+                                <option value="friends" selected>Friends</option>
+                                <option value="search">Search Engine</option>
+                                <option value="ad">Advertisement</option>
+                                <option value="other">Other</option>
+                           </select>
+                           <!--- The "select" function is a drop-down list, and each "option" function is a one of the options to select in the drop-down list.
+                                Also, within an option function, you can put "selected" to set it as the default visible option. -->
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>Newsletter</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="checkbox" name="news" id="news" checked> Yes, please
+                            <!--"checked" will make the box already checked by default-->
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>Drop us a line</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <textarea name="message" placeholder="Your Message"></textarea>
+                            <!---"textarea" places a textbox for message input.-->
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>&nbsp;</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="submit" value="Send it!">
+                            <!--"submit place a submit button for the form-->
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+<!------------------- FOOTER SECTION -------------------->
+        <footer>
+            <div class="row">
+                <div class="col span-1-of-2">
+                    <ul class="footer-nav">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">App</a></li>
+                    </ul>
+                </div>
+                <div class="col span-1-of-2">
+                    <ul class="social-links">
+                        <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                        <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                        <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                        <li><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <p>
+                    Copyright &copy; 2015 by FitMage.  All rights reserved. 
+                </p>
+            </div>
+
+        </footer>
+
     </body>
-
-
 </html>
