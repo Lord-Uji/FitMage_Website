@@ -1,0 +1,212 @@
+/* Big tablet to 1200px (widths smaller than the 1140px row)   */
+@media only screen and (max-width: 1200px) {
+  /*----------Hero Section-----------*/
+  .hero-text-box {
+    width: 100%;
+    padding: 0 2%;
+  }
+
+  /* We set padding to all rows to keep them visible within the shrinking browser*/
+  .row {
+    padding: 0 2%;
+  }
+}
+
+@media only screen and (max-width: 1137px) {
+  .icon-small {
+    width: 20px;
+    margin-right: 5px;
+  }
+  .city-feature {
+    font-size: 90%;
+  }
+}
+
+/* Small tablet to big tablet, 768px - 1023px. iPad in landscape view is 1024px.*/
+@media only screen and (max-width: 1023px) {
+  /*----------Universal affects-----------*/
+  body {
+    font-size: 18px;
+  }
+  /* Since we set all font-sizes through percentages, minus the main body function. where we
+    set the font to 20px, we can change the font size to 18px, and all fonts will
+    follow in according ratio. 
+    In summary, the font will shrink to 18px when the window is within this range.*/
+
+  section {
+    padding: 68px 0;
+  }
+  /* We take the section function from the style.css, and reduce the padding size.
+   This allows for greater height seperation between section classes.*/
+
+  /*----------Features Section-----------*/
+  .long-copy {
+    width: 80%;
+    margin-left: 10%;
+  }
+  /*We increase the initial paragraph width of the features section, to better fit the shrunk
+  ratio. Always keep in mind, mentally we double the margin % to match up to 100% with the width.
+  In this case, 80% width, means we want margin-left at 10% (since 10%x2 + 80% = 100%).*/
+
+  /*----------Steps Section-----------*/
+  .steps-box {
+    margin-top: 10px;
+  }
+  .steps-box:last-child {
+    margin-top: 10px;
+  }
+  .works-step {
+    margin-bottom: 40px;
+  }
+  .works-step:last-of-type {
+    margin-bottom: 60px;
+  }
+  .app-screen {
+    width: 50%;
+  }
+  /*----------Cities Section-----------*/
+  .icon-small {
+    width: 20px;
+    margin-right: 5px;
+  }
+  .city-feature {
+    font-size: 90%;
+  }
+
+  /*----------Sign up Section-----------*/
+  .plan-box {
+    width: 100%;
+    margin-left: 0%;
+    /* ^^ Since we had a margin-left of 5%, we need to remove that so the margin closes-in
+    normally when the browser is shrunk.*/
+  }
+  .plan-price {
+    font-size: 250%;
+  }
+
+  /*----------Contact Form Section-----------*/
+  .contact-form {
+    width: 80%;
+  }
+  /* Here we widen contact form to cover more of the leftover space after shrinking.*/
+}
+
+/*-----------------------------------------*/
+/*---------Cities Section Tweaks-----------*/
+
+@media only screen and (max-width: 888px) {
+  .icon-small {
+    width: 17px;
+  }
+  .city-feature {
+    font-size: 80%;
+  }
+}
+
+@media only screen and (max-width: 790px) {
+  .icon-small {
+    width: 16px;
+  }
+  .city-feature {
+    font-size: 80%;
+  }
+}
+
+@media only screen and (max-width: 785px) {
+  .icon-small {
+    width: 15px;
+  }
+  .city-feature {
+    font-size: 80%;
+  }
+}
+/*-----------------------------------------*/
+
+/*These rules will apply when the width of the device 
+or browser is less than or equal to 767px.
+For small phones to small tablets, 481px - 767px.*/
+@media only screen and (max-width: 767px) {
+  /*----------Universal affects-----------*/
+  body {
+    font-size: 16px;
+  }
+  section {
+    padding: 30px 0;
+  }
+
+  .col {
+    width: 100%;
+    margin: 0 0 1% 0;
+    /*We take the margin call in ".col" from grid.css to adjust the plan
+    boxes alignment. */
+  }
+
+  h1 {
+    font-size: 180%;
+  }
+  h2 {
+    font-size: 150%;
+  }
+
+  /*----------Hero Section-----------*/
+  .row,
+  .hero-text-box {
+    padding: 0 4%;
+  }
+
+  /*----------Nav Bar-----------*/
+
+  .main-nav {
+    display: none;
+  }
+
+  /*----------Features Section-----------*/
+  .long-copy {
+    width: 100%;
+    margin-left: 0%;
+  }
+
+  /*----------Steps Section-----------*/
+  .app-screen {
+    width: 40%;
+  }
+  .steps-box:first-child {
+    text-align: center;
+    padding-right: 0%;
+  }
+  .works-step {
+    margin-bottom: 20px;
+  }
+  .works-step:last-of-type {
+    margin-bottom: 20px;
+  }
+  .works-step div {
+    height: 40px;
+    width: 40px;
+    padding: 4px;
+    margin-right: 15px;
+  }
+
+  /*---------Cities Section Tweaks-----------*/
+  .icon-small {
+    width: 18px;
+  }
+  .city-feature {
+    font-size: 100%;
+  }
+  /*----------Sign up Section-----------*/
+  .plan-box {
+    margin-top: 1.5%;
+  }
+}
+
+/*These rules will apply when the width of the device 
+or browser is less than or equal to 480px. For small phones.*/
+@media only screen and (max-width: 480px) {
+  section {
+    padding: 25px 0;
+  }
+  .contact-form {
+    width: 100%;
+  }
+}

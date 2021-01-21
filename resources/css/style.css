@@ -312,7 +312,7 @@ transparent, and make a smooth transition to 0.2 like before. */
   margin-bottom: 50px;
 }
 
-/* Affects the last of anything within works-step, which in this case, are the btn types.*/
+/* Last-of-type affects the last of anything within works-step, which in this case, are the btn types.*/
 .works-step:last-of-type {
   margin-bottom: 80px;
 }
@@ -327,7 +327,7 @@ transparent, and make a smooth transition to 0.2 like before. */
   text-align: center;
   padding: 5px;
   float: left;
-  /*^^ Takes everything within the called div's, and set them to float side-by-side left to right.*/
+  /*^^ Takes everything within the divs, and set them to float side-by-side left to right.*/
   font-size: 150%;
   margin-right: 25px;
 }
