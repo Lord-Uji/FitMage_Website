@@ -448,6 +448,7 @@ and a 1px solid border, we properly seperate all these div's within the box clea
 }
 
 .plan-box div:last-child {
+  background-color: rgb(249, 249, 249);
   text-align: center;
   border: 0;
 }
