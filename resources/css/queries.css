@@ -39,6 +39,12 @@
   /* We take the section function from the style.css, and reduce the padding size.
    This allows for greater height seperation between section classes.*/
 
+  /*-----NAV--------*/
+
+  .main-nav li {
+    font-size: 95%;
+  }
+
   /*----------FEATURES SECTION-----------*/
   .long-copy {
     width: 80%;
@@ -100,6 +106,16 @@
   }
   .city-feature {
     font-size: 80%;
+  }
+
+  .main-nav li {
+    font-size: 75%;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .main-nav li {
+    font-size: 70%;
   }
 }
 
