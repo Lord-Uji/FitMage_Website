@@ -328,80 +328,90 @@ transparent, and make a smooth transition to 0.2 like before. */
   display: none;
 }
 
-.jig-logo img:hover {
-  -webkit-animation-name: wobble-to-top-right;
-  animation-name: wobble-to-top-right;
+/* Wobble animation for .logo-text in the sticky bar*/
+@-webkit-keyframes wobble-horizontal {
+  16.65% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+
+  33.3% {
+    -webkit-transform: translateX(-6px);
+    transform: translateX(-6px);
+  }
+
+  49.95% {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
+  }
+
+  66.6% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+
+  83.25% {
+    -webkit-transform: translateX(1px);
+    transform: translateX(1px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes wobble-horizontal {
+  16.65% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+
+  33.3% {
+    -webkit-transform: translateX(-6px);
+    transform: translateX(-6px);
+  }
+
+  49.95% {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
+  }
+
+  66.6% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+
+  83.25% {
+    -webkit-transform: translateX(1px);
+    transform: translateX(1px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.logo-text {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.logo-text:hover,
+.logo-text:focus,
+.logo-text:active {
+  -webkit-animation-name: wobble-horizontal;
+  animation-name: wobble-horizontal;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-timing-function: ease-in-out;
   animation-timing-function: ease-in-out;
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
-}
-
-@-webkit-keyframes wobble-to-top-right {
-  16.65% {
-    -ms-transform: translate(8px, -8px);
-    -webkit-transform: translate(8px, -8px);
-    transform: translate(8px, -8px);
-  }
-  33.3% {
-    -ms-transform: translate(-6px, 6px);
-    -webkit-transform: translate(-6px, 6px);
-    transform: translate(-6px, 6px);
-  }
-  49.95% {
-    -ms-transform: translate(4px, -4px);
-    -webkit-transform: translate(4px, -4px);
-    transform: translate(4px, -4px);
-  }
-  66.6% {
-    -ms-transform: translate(-2px, 2px);
-    -webkit-transform: translate(-2px, 2px);
-    transform: translate(-2px, 2px);
-  }
-  83.25% {
-    -ms-transform: translate(1px, -1px);
-    -webkit-transform: translate(1px, -1px);
-    transform: translate(1px, -1px);
-  }
-  100% {
-    -ms-transform: translate(0, 0);
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
-  }
-}
-@keyframes wobble-to-top-right {
-  16.65% {
-    -ms-transform: translate(8px, -8px);
-    -webkit-transform: translate(8px, -8px);
-    transform: translate(8px, -8px);
-  }
-  33.3% {
-    -ms-transform: translate(-6px, 6px);
-    -webkit-transform: translate(-6px, 6px);
-    transform: translate(-6px, 6px);
-  }
-  49.95% {
-    -ms-transform: translate(4px, -4px);
-    -webkit-transform: translate(4px, -4px);
-    transform: translate(4px, -4px);
-  }
-  66.6% {
-    -ms-transform: translate(-2px, 2px);
-    -webkit-transform: translate(-2px, 2px);
-    transform: translate(-2px, 2px);
-  }
-  83.25% {
-    -ms-transform: translate(1px, -1px);
-    -webkit-transform: translate(1px, -1px);
-    transform: translate(1px, -1px);
-  }
-  100% {
-    -ms-transform: translate(0, 0);
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
-  }
 }
 
 /*------------------------------------------------------*/
@@ -712,4 +722,27 @@ footer p {
 
 .ion-social-instagram-outline:hover {
   color: #517fa4;
+}
+
+/*------------------------------------------------------*/
+/* ANIMATIONS */
+/*------------------------------------------------------*/
+
+.js--wp-1,
+.js--wp-2,
+.js--wp-3 {
+  opacity: 0;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+.js--wp-4 {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+.js--wp-1 .animate__animated,
+.js--wp-2 .animate__animated,
+.js--wp-3 .animate__animated {
+  opacity: 1;
 }

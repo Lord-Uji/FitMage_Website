@@ -55,4 +55,31 @@ $(document).ready(function(){
         $('html, body').animate({scrollTop: $('.js--section-contact').offset().top},1000);     
     });
 
+
+/*Animations on scroll*/
+
+    $('.js--wp-1').waypoint(function(direction) {
+        $('.js--wp-1').addClass('animate__animated animate__fadeIn');
+    }, {
+        offset: '50%'
+    });
+
+    $('.js--wp-2').waypoint(function(direction) {
+        $('.js--wp-2').addClass('animate__animated animate__fadeInUp');
+    }, {
+        offset: '60%'
+    });
+
+    $('.js--wp-3').waypoint(function(direction) {
+        $('.js--wp-3').addClass('animate__animated animate__fadeIn');
+    }, {
+        offset: '90%'
+    });
+
+    $('.js--wp-4').waypoint(function(direction) {
+        $('.js--wp-4').addClass('animate__animated animate__pulse');
+    }, {
+        offset: '50%'
+    });
+   
 });
