@@ -314,6 +314,20 @@ transparent, and make a smooth transition to 0.2 like before. */
   border-bottom: 3px solid #834814;
 }
 
+/*--Mobile Navi---*/
+.mobile-nav-icon {
+  float: right;
+  margin-top: 50px;
+  margin-right: 10px;
+  cursor: pointer;
+  display: none;
+  color: #ffffff;
+}
+
+.mobile-nav-icon i {
+  font-size: 250%;
+}
+
 .logo-text {
   display: none;
   position: absolute;

@@ -157,9 +157,6 @@ For small phones to small tablets, 481px - 767px.*/
     boxes alignment. */
   }
 
-  h1 {
-    font-size: 180%;
-  }
   h2 {
     font-size: 150%;
   }
@@ -170,10 +167,71 @@ For small phones to small tablets, 481px - 767px.*/
     padding: 0 4%;
   }
 
-  /*----------NAV BAR-----------*/
+  /*----------NAVIGATION-----------*/
+
+  /*--HAMBURGER ICON--*/
+  .mobile-nav-icon {
+    display: inline-block;
+  }
+
+  .sticky .mobile-nav-icon {
+    margin-top: 7px;
+    margin-right: 10px;
+    margin-left: 0;
+  }
 
   .main-nav {
+    float: right;
+    margin-top: 40px;
+    margin-left: 0;
     display: none;
+  }
+
+  .main-nav li {
+    display: block;
+  }
+
+  .main-nav li a:link,
+  .main-nav li a:visited {
+    display: block;
+    margin-left: 0;
+    margin-top: 10px;
+    border: 0;
+    padding: 6px 0;
+  }
+
+  .main-nav li a:hover,
+  .main-nav li a:active,
+  .mobile-nav-icon i:hover,
+  .mobile-nav-icon i:active {
+    color: #e67e22;
+    transition: 0.3s;
+  }
+
+  .sticky .main-nav {
+    margin-top: 10px;
+    margin-left: 0;
+    float: right;
+  }
+
+  .sticky .main-nav li:link,
+  .sticky .main-nav li:visited {
+    border: 2px solid #ffffff;
+  }
+
+  .sticky .main-nav li a:link,
+  .sticky .main-nav li a:visited {
+    padding: 4px 0;
+    border: 0;
+    margin-top: 5px;
+  }
+
+  .sticky .main-nav li a:hover,
+  .sticky .main-nav li a:active,
+  .sticky .mobile-nav-icon i:hover,
+  .sticky .mobile-nav-icon i:active {
+    color: #77400ff8;
+    transition: 0.3s;
   }
 
   /*----------FEATURES SECTION-----------*/
@@ -213,6 +271,12 @@ For small phones to small tablets, 481px - 767px.*/
   /*----------SIGN UP SECTION-----------*/
   .plan-box {
     margin-top: 1.5%;
+  }
+}
+
+@media only screen and (max-width: 507px) {
+  h1 {
+    font-size: 180%;
   }
 }
 
