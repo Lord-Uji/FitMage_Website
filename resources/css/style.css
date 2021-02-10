@@ -221,7 +221,7 @@ making sure the image scales appropriately in the page by using
  thin margin gap at the top by setting height:100vh, so it is 100% of cx viewport. */
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(img/gym_hero.jpg);
+    url(img/gym_hero-min.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -561,7 +561,7 @@ along with it.*/
 
 .section-signup {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(img/omnath1.jpg);
+    url(img/omnath1-min.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
